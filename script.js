@@ -1,5 +1,6 @@
 const button = document.querySelector("button");
-
+const quote = document.querySelector(".quote")
+const author = document.querySelector(".author")
 const batmanQuotes = [
   { quote: "Eu sou o Batman.", author: "Batman / Bruce Wayne" },
   {
@@ -88,7 +89,7 @@ const batmanQuotes = [
 ];
 
 button.addEventListener("click", () => {
-  
-  console.log(batmanQuotes)
-  
+  let res = Math.floor(Math.random()* batmanQuotes.length)
+  quote.textContent = batmanQuotes[res].quote
+  author.textContent = batmanQuotes[res].author
 });
